@@ -1,0 +1,92 @@
+{
+  "name": "@spark-nz/react-starter",
+  "version": "1.0.0",
+  "description": "@spark-nz/react-starter",
+  "author": "Touchcast",
+  "contributors": [
+    {
+      "name": "Jonathan Warning",
+      "email": "jonathan.warning@touchcast.co.nz"
+    },
+    {
+      "name": "Jay Baker",
+      "email": "jay.baker@touchcast.co.nz"
+    },
+    {
+      "name": "Mark Coleman",
+      "email": "mark.coleman@touchcast.co.nz"
+    }
+  ],
+  "copyright": "Copyright (c) 2016 Spark",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "build:prod": "npm run lint && npm run flow && npm run test && npm run clean && cross-env NODE_ENV=production webpack",
+    "clean": "rimraf dist",
+    "dev": "webpack-dashboard -- node server",
+    "flow": "flow",
+    "lint": "stylelint src/**/*.scss && eslint .",
+    "eslint:fix": "eslint --fix .",
+    "precommit-msg": "echo 'Running pre-commit checks...' && exit 0",
+    "start": "node server",
+    "test": "cross-env BABEL_ENV=test mocha --require babel-register --require ignore-styles --reporter spec {src/**/test,test}/**/*.js"
+  },
+  "pre-commit": [
+    "precommit-msg",
+    "lint"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.7",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2016": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "chai": "^3.5.0",
+    "commander": "^2.9.0",
+    "compression": "^1.6.2",
+    "cross-env": "^3.1.3",
+    "css-loader": "^0.26.0",
+    "eslint": "^3.10.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-flowtype": "^2.25.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.7.1",
+    "express": "^4.14.0",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
+    "file-loader": "^0.9.0",
+    "flow-bin": "^0.35.0",
+    "html-webpack-plugin": "^2.24.1",
+    "ignore-styles": "^5.0.1",
+    "image-webpack-loader": "^3.0.0",
+    "json-loader": "^0.5.4",
+    "lodash": "^4.17.2",
+    "mocha": "^3.1.2",
+    "node-sass": "^3.13.0",
+    "postcss": "^5.2.5",
+    "postcss-cssnext": "^2.8.0",
+    "postcss-loader": "^1.1.1",
+    "pre-commit": "^1.1.3",
+    "promptly": "^2.1.0",
+    "react": "^15.4.0",
+    "react-addons-test-utils": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "react-hot-loader": "^3.0.0-beta.6",
+    "rimraf": "^2.5.4",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "stylelint": "^7.5.0",
+    "stylelint-config-sass-guidelines": "^1.1.0",
+    "stylelint-config-standard": "^14.0.0",
+    "stylelint-webpack-plugin": "^0.4.0",
+    "webpack": "^2.1.0-beta.25",
+    "webpack-dashboard": "^0.2.0",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.2"
+  }
+}

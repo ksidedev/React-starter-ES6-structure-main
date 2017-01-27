@@ -1,0 +1,32 @@
+.wrapper {
+    background-color: #b3b3b3;
+    margin: 20px;
+    padding: 20px;
+}
+
+.text,
+%text {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.counter {
+    @extend %text;
+
+    font-weight: bold;
+}
+
+.button {
+    background: #ff6b21;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    outline: 0;
+    padding: 8px 16px;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        background: #ff570a;
+    }
+}

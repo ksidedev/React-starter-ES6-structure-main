@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-sass-guidelines"
+  ],
+  "rules": {
+    "font-family-name-quotes": "always-where-recommended",
+    "function-url-quotes": "always",
+    "indentation": 4,
+    "selector-type-no-unknown": [true, {
+      "ignoreTypes": ["/^%/"]
+    }],
+    "string-quotes": "single"
+  }
+}
